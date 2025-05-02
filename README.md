@@ -19,6 +19,52 @@ The project utilizes four interconnected tables—Pizza_Types, Pizzas, Orders, a
   - **Financial Metrics**: Track essential financial indicators to improve profit margins, optimize pricing strategies, and assess overall business performance.
   - **Customer Behavior & Sales Patterns**: Explore sales dynamics to better understand customer habits and improve business responsiveness.
 
+The Python code used to clean, organize, and prepare the data can be found in the Jupyter Notebook [here.]()
+
+The SQL queries used to create the data model and address the business questions are available [here.]()
+
 ## Relational Data Model
 Pizza Place Sales database structure as seen bellow consist of four table: orders, order_details, pizzas, pizza_details with total row count of 48.620 records
-[Data model]()
+![Data model](https://github.com/mustafaozzkul/Pizza_Place/blob/main/Pizza_place_data_model.png?raw=true)
+
+**🔗 Table Relationships and Constraints**
+
+The SQL queries below define the primary and foreign key constraints that establish the relationships between the tables:
+```sql
+ALTER TABLE orders
+ADD CONSTRAINT orders_pk PRIMARY KEY (order_id);
+
+ALTER TABLE order_details
+ADD CONSTRAINT order_fk
+FOREIGN KEY (order_id) REFERENCES orders(order_id);
+
+ALTER TABLE order_details
+ADD CONSTRAINT order_details_id_PK PRIMARY KEY (order_details_id);
+
+ALTER TABLE pizzas
+ADD CONSTRAINT pizza_id_pk PRIMARY KEY (pizza_id);
+
+ALTER TABLE order_details
+ADD CONSTRAINT pizza_id_fk
+FOREIGN KEY (pizza_id) REFERENCES pizzas(pizza_id);
+
+ALTER TABLE pizza_details
+ADD CONSTRAINT pizza_type_pk PRIMARY KEY (pizza_type_id);
+
+ALTER TABLE pizzas
+ADD CONSTRAINT pizza_type_id_FK
+FOREIGN KEY (pizza_type_id) REFERENCES pizza_details(pizza_type_id);
+```
+
+## Executive Summary
+
+**Sales Performance Analysis**
+
+- What is the total revenue for Pizza place
+```sql
+SELECT 
+	ROUND(SUM(od.quantity * p.price):: NUMERIC,1) as Total_revenue
+FROM order_details od
+LEFT JOIN pizzas p on od.pizza_id = p.pizza_id
+```
+![image]()
