@@ -21,7 +21,7 @@ The project utilizes four interconnected tables—Pizza_Types, Pizzas, Orders, a
 
 The Python code used to clean, organize, and prepare the data can be found in the Jupyter Notebook [here.](Pizza_Place_sales.ipynb)
 
-The SQL queries used to create the data model and address the business questions are available [here.]()
+The SQL queries used to create the data model and address the business questions are available [here.](Pizza_place.sql)
 
 ## Relational Data Model
 Pizza Place Sales database structure as seen bellow consist of four table: orders, order_details, pizzas, pizza_details with total row count of 48.620 records
