@@ -19,7 +19,7 @@ The project utilizes four interconnected tables—Pizza_Types, Pizzas, Orders, a
   - **Financial Metrics**: Track essential financial indicators to improve profit margins, optimize pricing strategies, and assess overall business performance.
   - **Customer Behavior & Sales Patterns**: Explore sales dynamics to better understand customer habits and improve business responsiveness.
 
-The Python code used to clean, organize, and prepare the data can be found in the Jupyter Notebook [here.]()
+The Python code used to clean, organize, and prepare the data can be found in the Jupyter Notebook [here.](Pizza_Place_sales.ipynb)
 
 The SQL queries used to create the data model and address the business questions are available [here.]()
 
