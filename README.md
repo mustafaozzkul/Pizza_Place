@@ -1,7 +1,7 @@
-# Pizza_Place
+# Restaurant Sales & Product Performance
 
 ## Project Overview
-The **Pizza Place Sales Analysis** project is designed to support a local pizzeria in making informed, data-driven business decisions. The analysis focuses on identifying customer ordering behaviors, best-selling pizza varieties, and key revenue drivers through comprehensive data exploration and relational modeling.
+The **Restaurant Sales & Product Performance** project is designed to support a local pizzeria in making informed, data-driven business decisions. The analysis focuses on identifying customer ordering behaviors, best-selling pizza varieties, and key revenue drivers through comprehensive data exploration and relational modeling.
 
 The project utilizes four interconnected tables— **Pizza_Types**, **Pizzas**, **Orders**, and **Order_Details** —to uncover actionable insights from historical sales data.
 
